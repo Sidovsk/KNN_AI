@@ -1,7 +1,6 @@
 import csv
 import math
 import numpy
-from sklearn.metrics.pairwise import cosine_similarity
 
 def cosineSim(sample, data):
     cosines = []
@@ -68,9 +67,6 @@ with open('./spambase.data') as f:
     #separating 75% to train and 25% to test
     trainPercent = int(0.75*len(data))
     train, tests = data[:trainPercent], data[trainPercent:]
-    print(len(data))
-    print(len(train))
-    print(len(tests))
     #Measuring accuracies
     hits = 0
     for test in tests:
